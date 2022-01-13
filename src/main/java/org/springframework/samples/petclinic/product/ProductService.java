@@ -16,11 +16,11 @@ public class ProductService {
     }
 
     public List<Product> getProductsCheaperThan(double price) {
-        return null;
+        return this.productRepository.findByPriceLessThan(price);
     }
 
-    public ProductType getProductType(String typeName) {
-        return null;
+    public ProductType getProductType(String name) {
+        return this.productRepository.getProductType(name);
     }
 
     public Product save(Product p){
